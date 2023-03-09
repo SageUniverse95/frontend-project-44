@@ -14,7 +14,7 @@ export const startEngine = (description, actualAnswer) => {
 
   for (let i = 0; i < roundForWin; i += 1) {
     const [trueAnswer, question] = actualAnswer();
-    console.log(question);
+    console.log(`Question: ${String(question)}`);
     const answer = readlineSync.question('Your answer: ');
     if (String(answer) !== String(trueAnswer)) {
       console.log(`${answer} is wrong answer ;(. Correct answer was ${trueAnswer}\nLet's try again, ${name}!`);

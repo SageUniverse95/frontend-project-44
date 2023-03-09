@@ -20,9 +20,8 @@ const generateData = () => {
   const randomStep = generateRandomNumber(0, 9);
   const actualAnswer = progression[randomStep];
   progression[randomStep] = '..';
-  const question = `Question: ${progression.join(' ')}`;
-  const roundDat = [actualAnswer, question];
-  return roundDat;
+  const question = `${progression.join(' ')}`;
+  return [actualAnswer, question];
 };
 
 export default function runProgressionGame() {

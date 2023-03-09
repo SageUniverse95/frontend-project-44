@@ -9,10 +9,10 @@ const checkingEvenNumber = (randomNumber) => (randomNumber % 2 === 0);
 
 const generateData = () => {
   const randomNumber = generateRandomNumber(0, 100);
-  const question = `Question: ${randomNumber}`;
+  const question = randomNumber;
   const trueAnswer = (checkingEvenNumber(randomNumber)) ? 'yes' : 'no';
-  const roundData = [trueAnswer, question];
-  return roundData;
+
+  return [trueAnswer, question];
 };
 
 export default function runEvenGame() {
