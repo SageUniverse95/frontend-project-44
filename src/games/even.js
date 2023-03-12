@@ -5,12 +5,12 @@ import {
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const checkingEvenNumber = (randomNumber) => (randomNumber % 2 === 0);
+const isEven = (randomNumber) => (randomNumber % 2 === 0);
 
 const generateData = () => {
   const randomNumber = generateRandomNumber(0, 100);
   const question = randomNumber;
-  const trueAnswer = (checkingEvenNumber(randomNumber)) ? 'yes' : 'no';
+  const trueAnswer = (isEven(randomNumber)) ? 'yes' : 'no';
 
   return [trueAnswer, question];
 };
