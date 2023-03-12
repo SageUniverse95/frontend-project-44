@@ -17,7 +17,8 @@ const generateProgression = (rangeProgression, randomStepInProgression, numberIn
 
 const generateData = () => {
   const progression = generateProgression(10, randomStep, randomNumberInProgression);
-  const randomIndex = generateRandomNumber(0, 9);
+  const maxIndexInProgression = 9;
+  const randomIndex = generateRandomNumber(0, maxIndexInProgression);
   const actualAnswer = progression[randomIndex];
   progression[randomIndex] = '..';
   const question = `${progression.join(' ')}`;
