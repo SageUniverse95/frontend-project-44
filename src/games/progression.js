@@ -4,18 +4,19 @@ import {
 
 const description = 'What number is missing in the progression?';
 const randomStep = generateRandomNumber(1, 50);
+const randomNumberInProgression = generateRandomNumber(1, 50);
 
-const generateProgression = (rangeProgression, randomStepInArr) => {
+const generateProgression = (rangeProgression, randomStepInProgression, numberInProgression) => {
   const arrOfNumbers = [];
-  for (let index = generateRandomNumber(1, 50);
-    arrOfNumbers.length < rangeProgression; index += randomStepInArr) {
+  for (let index = numberInProgression;
+    arrOfNumbers.length < rangeProgression; index += randomStepInProgression) {
     arrOfNumbers.push(index);
   }
   return arrOfNumbers;
 };
 
 const generateData = () => {
-  const progression = generateProgression(10, randomStep);
+  const progression = generateProgression(10, randomStep, randomNumberInProgression);
   const randomIndex = generateRandomNumber(0, 9);
   const actualAnswer = progression[randomIndex];
   progression[randomIndex] = '..';
