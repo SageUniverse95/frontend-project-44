@@ -3,8 +3,6 @@ import {
 } from '../index.js';
 
 const description = 'What number is missing in the progression?';
-const randomStep = generateRandomNumber(1, 50);
-const randomNumberInProgression = generateRandomNumber(1, 50);
 
 const generateProgression = (rangeProgression, randomStepInProgression, numberInProgression) => {
   const arrOfNumbers = [];
@@ -16,8 +14,12 @@ const generateProgression = (rangeProgression, randomStepInProgression, numberIn
 };
 
 const generateData = () => {
-  const progression = generateProgression(10, randomStep, randomNumberInProgression);
+  const randomStep = generateRandomNumber(1, 50);
+  const randomNumberInProgression = generateRandomNumber(1, 50);
+  const rangeProgression = 10;
   const maxIndexInProgression = 9;
+
+  const progression = generateProgression(rangeProgression, randomStep, randomNumberInProgression);
   const randomIndex = generateRandomNumber(0, maxIndexInProgression);
   const actualAnswer = progression[randomIndex];
   progression[randomIndex] = '..';
